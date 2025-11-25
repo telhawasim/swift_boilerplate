@@ -1,0 +1,14 @@
+//
+//  Staging.xcconfig
+//  SwiftBoilerpoint
+//
+//  Created by Telha Wasim on 25/11/2025.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+SLASH = /
+ENVIRONMENT = STAGING
+
+BASE_URL = https:${SLASH}${SLASH}dummyjson.com
