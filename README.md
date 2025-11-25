@@ -2,10 +2,10 @@
 SwiftBoilerpoint is a clean, opinionated SwiftUI starter template designed to help you bootstrap production-grade apps faster. It demonstrates a practical architecture with theming, typed navigation, dependency injection, and an async/await networking layer — all structured to be easy to extend and maintain.
 
 # Why this exists
-• Reduce boilerplate: Start from a sensible foundation instead of a blank canvas.
-• Encourage clarity: Keep responsibilities separated (UI, routing, DI, networking, configuration).
-• Scale with confidence: Patterns used here adapt well as features grow.
-• Be pragmatic: Uses modern SwiftUI and Swift Concurrency with minimal magic.
+* Reduce boilerplate: Start from a sensible foundation instead of a blank canvas.
+* Encourage clarity: Keep responsibilities separated (UI, routing, DI, networking, configuration).
+* Scale with confidence: Patterns used here adapt well as features grow.
+* Be pragmatic: Uses modern SwiftUI and Swift Concurrency with minimal magic.
 
 # Key capabilities
 • SwiftUI-first UI with TabView + NavigationStack per tab
