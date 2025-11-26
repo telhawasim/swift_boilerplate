@@ -11,7 +11,6 @@ protocol NetworkServiceProtocol {
     func request<T: Decodable>(_ endpoint: Endpoint) async throws -> T
 }
 
-@MainActor
 final class NetworkService: NetworkServiceProtocol {
     
     // MARK: - PROPERTIES -
