@@ -20,6 +20,7 @@ struct SwiftBoilerpointApp: App {
     var body: some Scene {
         WindowGroup {
             TabbarView()
+                .customNetworkAlert()
                 .environmentObject(self.router)
                 .environmentObject(self.appearance)
                 .preferredColorScheme(

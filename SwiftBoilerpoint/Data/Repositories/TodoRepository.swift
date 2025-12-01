@@ -23,16 +23,10 @@ final class TodoRepository: TodoRepositoryProtocol {
     }
     
     func getAllTodos() async throws -> GetAllTodoResponse? {
-        let endpoint = TodoEndpoint.fetchAllTodos
-        let response: GetAllTodoResponse = try await self.networkService.request(endpoint)
-        
-        return response
+        try await self.networkService.request(TodoEndpoint.fetchAllTodos)
     }
     
     func deleteTodo(id: Int) async throws -> TodoDeletionResponse? {
-        let endpoint = TodoEndpoint.deleteTodo(id: id)
-        let response: TodoDeletionResponse = try await self.networkService.request(endpoint)
-        
-        return response
+        try await self.networkService.request(TodoEndpoint.deleteTodo(id: id))
     }
 }

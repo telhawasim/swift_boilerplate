@@ -7,7 +7,12 @@
 
 import Foundation
 
-final class NetworkLogger {
+protocol NetworkLoggerProtocol {
+    func logRequest(_ request: URLRequest)
+    func logResponse(_ response: URLResponse?, data: Data?, error: Error?)
+}
+
+final class NetworkLogger: NetworkLoggerProtocol {
     
     // MARK: - PROPERTIES -
     

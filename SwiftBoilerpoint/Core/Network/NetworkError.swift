@@ -19,7 +19,7 @@ enum NetworkError: LocalizedError {
         case .invalidURL: return "Invalid URL"
         case .noData: return "No data received from the server"
         case .decodingError: return "Failed to decode the response"
-        case .serverError(let code, let message): return "Server returned error with the code: \(code) and \(message ?? "")"
+        case .serverError(let code, let message): return "Server returned error: \(code) - \(message ?? "Unknown")"
         case .unknown(let error): return error.localizedDescription
         }
     }
