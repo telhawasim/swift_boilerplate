@@ -14,6 +14,8 @@ struct SwiftBoilerpointApp: App {
     
     //StateObject
     @StateObject private var router = Router()
+    @StateObject private var languageManager = LanguageManager.shared
+    //State
     
     // MARK: - LIFECYCLE -
     var body: some Scene {
@@ -21,6 +23,7 @@ struct SwiftBoilerpointApp: App {
             TabbarView()
                 .customNetworkAlert()
                 .environmentObject(self.router)
+                .environmentObject(self.languageManager)
                 .preferredColorScheme(
                     AppData.isDarkMode == true ? .dark : .light
                 )

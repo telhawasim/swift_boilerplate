@@ -6,8 +6,8 @@
 //
 
 enum TabbarType: String, CaseIterable {
-    case todos = "Todos"
-    case settings = "Settings"
+    case todos
+    case settings
     
     var getIcon: String {
         switch self {

@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  SwiftBoilerpoint
+
+  Created by Telha Wasim on 02/12/2025.
+  
+*/
+
+"tabbar.todos" = "Todos";
+"tabbar.settings" = "Ajustes";
+
+"settings.title" = "Ajustes";
+"settings.appearnace" = "Apariencia";
+"settings.dark_mode" = "Modo oscuro";
+"settings.language" = "Idioma";

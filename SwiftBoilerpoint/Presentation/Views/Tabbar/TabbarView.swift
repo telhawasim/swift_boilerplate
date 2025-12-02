@@ -18,7 +18,7 @@ struct TabbarView: View {
     var body: some View {
         TabView(selection: self.$router.selectedTab) {
             ForEach(TabbarType.allCases, id: \.rawValue) { tab in
-                Tab(tab.rawValue, systemImage: tab.getIcon, value: tab) {
+                Tab(self.title(tab), systemImage: tab.getIcon, value: tab) {
                     NavigationStack(path: self.handleNavigationPath(tab)) {
                         self.tabContent(for: tab)
                             .navigationDestination(for: Route.self) { route in
@@ -33,6 +33,16 @@ struct TabbarView: View {
 
 // MARK: - FUNCTIONS -
 extension TabbarView {
+    
+    /// In order to handle the title localization for tabbar
+    /// - Parameter tab: `TabbarType` will be required in order to handle switch statement against each tab
+    /// - Returns: `String` will return localized string
+    private func title(_ tab: TabbarType) -> String {
+        switch tab {
+        case .todos: return AppTexts.Tabbar.todos
+        case .settings: return AppTexts.Tabbar.settings
+        }
+    }
     
     /// In order to handle the multiple navigation path for navigation
     /// - Parameter tab: `TabbarType` will be needing in order to determine which navigation path to handle

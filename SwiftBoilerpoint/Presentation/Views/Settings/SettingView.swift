@@ -13,22 +13,49 @@ struct SettingView: View {
     
     @Bindable private var appData = AppData.shared
     
+    @EnvironmentObject private var language: LanguageManager
+        
     // MARK: - VIEWS -
     var body: some View {
-        HStack {
-            Text("Dark Mode:")
+        List {
+            Section(AppTexts.Settings.appearance) {
+                HStack {
+                    Text(AppTexts.Settings.darkMode)
+                    
+                    Spacer()
+                    
+                    Toggle(isOn: self.$appData.isDarkMode, label: {
+                        EmptyView()
+                    })
+                }
+            }
             
-            Spacer()
-            
-            Toggle(isOn: self.$appData.isDarkMode, label: {
-                EmptyView()
-            })
+            Section(AppTexts.Settings.language) {
+                ForEach(AppLanguage.allCases) { language in
+                    Button(action: {
+                        self.language.currentLanguage = language
+                    }, label: {
+                        HStack {
+                            Text(language.flag)
+                            Text(language.displayName)
+                                .foregroundStyle(Color.primary)
+                            
+                            Spacer()
+                            
+                            if self.language.currentLanguage == language {
+                                Image(systemName: "checkmark")
+                                    .foregroundStyle(Color.blue)
+                            }
+                        }
+                    })
+                }
+            }
         }
-        .padding()
-        .navigationTitle("Settings")
+        .navigationTitle(AppTexts.Settings.title)
     }
 }
 
 #Preview {
     SettingView()
+        .environmentObject(LanguageManager.shared)
 }
