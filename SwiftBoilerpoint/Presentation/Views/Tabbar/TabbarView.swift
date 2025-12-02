@@ -13,6 +13,7 @@ struct TabbarView: View {
     
     //EnvironmentObject
     @EnvironmentObject private var router: Router
+    @EnvironmentObject private var localization: LanguageManager
     
     // MARK: - VIEWS -
     var body: some View {
@@ -28,6 +29,7 @@ struct TabbarView: View {
                 }
             }
         }
+        .id(self.localization.currentLanguage)
     }
 }
 
@@ -73,4 +75,5 @@ extension TabbarView {
 #Preview {
     TabbarView()
         .environmentObject(Router())
+        .environmentObject(LanguageManager.shared)
 }
