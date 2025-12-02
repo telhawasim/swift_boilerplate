@@ -23,8 +23,8 @@ A clean, opinionated SwiftUI starter template for building production-grade iOS 
 * iOS 18+
 
 # Getting started
-git clone https://github.com/telhawasim/swift_boilerplate.git
-cd swift_boilerplate
+* git clone https://github.com/telhawasim/swift_boilerplate.git
+* cd swift_boilerplate
 
 # Configure Info.plist
 Make sure these keys exist and match your build configs:
@@ -33,9 +33,9 @@ Make sure these keys exist and match your build configs:
 * Configuration (e.g., Debug-Staging, Debug-Production, Release-Staging, Release-Production)
 
 # Add Localizations
-1- Select project → Info → Localizations
-2- Verify English and Spanish are added
-3- Run with Cmd+R
+* Select project → Info → Localizations
+* Verify English and Spanish are added
+* Run with Cmd+R
 
 # How to use
 * Networking: Define endpoints with your Endpoint type and call NetworkService.request<T>(_:) to decode into models. It supports both direct T and wrapped BaseResponse<T>.
@@ -52,10 +52,10 @@ Make sure these keys exist and match your build configs:
 
 # Contributing
 Contributions welcome! Please:
-1- Fork the project
-2- Create feature branch (git checkout -b feature/AmazingFeature)
-3- Commit changes (git commit -m 'Add AmazingFeature')
-4- Push to branch (git push origin feature/AmazingFeature)
-5- Open Pull Request
+* Fork the project
+* Create feature branch (git checkout -b feature/AmazingFeature)
+* Commit changes (git commit -m 'Add AmazingFeature')
+* Push to branch (git push origin feature/AmazingFeature)
+* Open Pull Request
 
 Made with ❤️ for the Swift community
