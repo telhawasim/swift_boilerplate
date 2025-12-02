@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		09960FA62EDDDB61007439BF /* SecureDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 09960FA52EDDDB61007439BF /* SecureDefaults */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		09D504E92ED58F79003E557E /* SwiftBoilerpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBoilerpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09960FA62EDDDB61007439BF /* SecureDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = SwiftBoilerpoint;
 			packageProductDependencies = (
+				09960FA52EDDDB61007439BF /* SecureDefaults */,
 			);
 			productName = SwiftBoilerpoint;
 			productReference = 09D504E92ED58F79003E557E /* SwiftBoilerpoint.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 09D504E02ED58F79003E557E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				09960FA42EDDDB61007439BF /* XCRemoteSwiftPackageReference "SecureDefaults" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 09D504EA2ED58F79003E557E /* Products */;
 			projectDirPath = "";
@@ -584,6 +593,25 @@
 			defaultConfigurationName = "Debug-Staging";
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		09960FA42EDDDB61007439BF /* XCRemoteSwiftPackageReference "SecureDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vpeschenkov/SecureDefaults.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		09960FA52EDDDB61007439BF /* SecureDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09960FA42EDDDB61007439BF /* XCRemoteSwiftPackageReference "SecureDefaults" */;
+			productName = SecureDefaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09D504E12ED58F79003E557E /* Project object */;
 }

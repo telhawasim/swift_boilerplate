@@ -11,10 +11,7 @@ struct SettingView: View {
     
     // MARK: - PROPERTIES -
     
-    //EnvironmentObject
-    @EnvironmentObject private var appearance: AppearanceManager
-    //State
-    @State private var isDarkModeOn: Bool = false
+    @Bindable private var appData = AppData.shared
     
     // MARK: - VIEWS -
     var body: some View {
@@ -23,22 +20,15 @@ struct SettingView: View {
             
             Spacer()
             
-            Toggle(isOn: self.$isDarkModeOn, label: {
-                Text("")
+            Toggle(isOn: self.$appData.isDarkMode, label: {
+                EmptyView()
             })
-            .onChange(of: self.isDarkModeOn) { (oldValue, newValue) in
-                self.appearance.toogleDarkMode(newValue)
-            }
         }
         .padding()
         .navigationTitle("Settings")
-        .onAppear {
-            self.isDarkModeOn = self.appearance.currentAppearance == .dark
-        }
     }
 }
 
 #Preview {
     SettingView()
-        .environmentObject(AppearanceManager())
 }

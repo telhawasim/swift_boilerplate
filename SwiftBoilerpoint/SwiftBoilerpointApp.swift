@@ -13,7 +13,6 @@ struct SwiftBoilerpointApp: App {
     // MARK: - PROPERTIES -
     
     //StateObject
-    @StateObject private var appearance = AppearanceManager()
     @StateObject private var router = Router()
     
     // MARK: - LIFECYCLE -
@@ -22,9 +21,8 @@ struct SwiftBoilerpointApp: App {
             TabbarView()
                 .customNetworkAlert()
                 .environmentObject(self.router)
-                .environmentObject(self.appearance)
                 .preferredColorScheme(
-                    self.appearance.currentAppearance == .system ? nil : (self.appearance.currentAppearance == .dark ? .dark : .light)
+                    AppData.isDarkMode == true ? .dark : .light
                 )
         }
     }
